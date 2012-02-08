@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>523</width>
-    <height>384</height>
+    <width>794</width>
+    <height>570</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>0</y>
-      <width>381</width>
-      <height>311</height>
+      <width>681</width>
+      <height>511</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -32,10 +32,10 @@
    <widget class="QPushButton" name="coligado">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>20</y>
+      <x>700</x>
+      <y>30</y>
       <width>93</width>
-      <height>27</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
@@ -45,10 +45,10 @@
    <widget class="QPushButton" name="curso">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>70</y>
+      <x>700</x>
+      <y>110</y>
       <width>93</width>
-      <height>27</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
@@ -58,10 +58,10 @@
    <widget class="QPushButton" name="disciplina">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>120</y>
+      <x>700</x>
+      <y>190</y>
       <width>93</width>
-      <height>27</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
@@ -71,10 +71,10 @@
    <widget class="QPushButton" name="turma">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>170</y>
+      <x>700</x>
+      <y>270</y>
       <width>93</width>
-      <height>27</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
@@ -84,8 +84,8 @@
    <widget class="QPushButton" name="novo">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>320</y>
+      <x>470</x>
+      <y>520</y>
       <width>93</width>
       <height>27</height>
      </rect>
@@ -97,8 +97,8 @@
    <widget class="QPushButton" name="editar">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>320</y>
+      <x>560</x>
+      <y>520</y>
       <width>93</width>
       <height>27</height>
      </rect>
