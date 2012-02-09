@@ -4,16 +4,18 @@
 import sys
 from PyQt4 import QtCore, QtGui
 from mainwindow import Ui_MainWindow
+import simplejson
 
-def f():
+def list_related():
         import urllib
-#        full = urllib.urlopen("http://localhost:3000/posts.json")#"https://www.googleapis.com/plus/v1/people/104180219523854245733.json")
-#        contents = full.read()
-#        return contents
         url = 'http://localhost:3000/posts.json'
         f = urllib.urlopen(url)
-        d = f.read()
-        return d
+        listJson = simplejson.loads(f.read())
+        listOut=[]
+        for x in listJson:
+                listOut.append(x['title'])
+
+        return listOut
 
 class TestWindow(QtGui.QMainWindow, Ui_MainWindow):
         def __init__(self):
@@ -30,9 +32,9 @@ class TestWindow(QtGui.QMainWindow, Ui_MainWindow):
 
 
         def related(self):
-        
-                e = f()
-                self.listWidget.addItem(e)
+                c = list_related()
+                for x in c:
+                        self.listWidget.addItem(x)
 
         def course(self):
                 self.listWidget.addItem("Curso")
