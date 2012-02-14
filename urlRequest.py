@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import urllib
+from urllib import urlencode
 import simplejson
+import requests
 
 def list_json(resource):
     url = 'http://0.0.0.0:3000/api/'
@@ -27,3 +29,10 @@ def get_spaces(env_name):
                   if iterate['name'] == env_name:
                           Id = iterate['id']
         return list_json('courses/' + str(Id) + '/spaces')
+        
+def new_enviroment(dict_enviroment): 
+    params = simplejson.dumps({'environment': dict_enviroment })
+    url = "http://127.0.0.1:3000/api/environments"
+    headers = {'content-type':'application/json'}
+    result = requests.post(url, data=params, headers=headers)
+

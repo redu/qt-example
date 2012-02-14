@@ -5,6 +5,7 @@ import sys
 from PyQt4 import QtCore, QtGui
 from mainwindow import Ui_MainWindow
 import urlRequest       
+import ui_form
 
 class Courses(QtGui.QWidget):
     def __init__(self):

@@ -1,0 +1,395 @@
+Downloading/unpacking requests-oauth
+  Getting page http://pypi.python.org/simple/requests-oauth
+  URLs to search for versions for requests-oauth:
+  * http://pypi.python.org/simple/requests-oauth
+  Getting page http://github.com/maraujop/requests-oauth
+  Analyzing links from page http://pypi.python.org/simple/requests-oauth/
+    Found link http://pypi.python.org/packages/source/r/requests-oauth/requests-oauth-0.3.0.tar.gz#md5=6ec90068b7a60eebfa5584489a2efa45 (from http://pypi.python.org/simple/requests-oauth/), version: 0.3.0
+    Found link http://pypi.python.org/packages/source/r/requests-oauth/requests-oauth-0.2.1.tar.gz#md5=cdbac4737f2c31badc81d4fb1798467a (from http://pypi.python.org/simple/requests-oauth/), version: 0.2.1
+    Found link http://pypi.python.org/packages/source/r/requests-oauth/requests-oauth-0.2.3.tar.gz#md5=c128a07d8668ac4c682bf23de5aac05d (from http://pypi.python.org/simple/requests-oauth/), version: 0.2.3
+    Found link http://pypi.python.org/packages/source/r/requests-oauth/requests-oauth-0.2.2.tar.gz#md5=51aa2b9ae0f596405a6ef564c88dd406 (from http://pypi.python.org/simple/requests-oauth/), version: 0.2.2
+    Skipping link http://github.com/maraujop/requests-oauth (from http://pypi.python.org/simple/requests-oauth/); not a file
+    Skipping link http://tools.ietf.org/html/rfc5849#section-3.5 (from http://pypi.python.org/simple/requests-oauth/); not a file
+    Skipping link http://www.github.com/maraujop/ (from http://pypi.python.org/simple/requests-oauth/); not a file
+    Skipping link http://github.com/kennethreitz/requests (from http://pypi.python.org/simple/requests-oauth/); not a file
+    Skipping link http://api.twitter.com/1/statuses/update.json (from http://pypi.python.org/simple/requests-oauth/); unknown archive format: .json
+    Skipping link http://api.twitter.com/1/account/rate_limit_status.json (from http://pypi.python.org/simple/requests-oauth/); unknown archive format: .json
+    Skipping link https://api.twitter.com/oauth/request_token (from http://pypi.python.org/simple/requests-oauth/); not a file
+    Skipping link https://github.com/kennethreitz (from http://pypi.python.org/simple/requests-oauth/); not a file
+    Skipping link https://github.com/simplegeo/python-oauth2 (from http://pypi.python.org/simple/requests-oauth/); not a file
+  Analyzing links from page https://github.com/maraujop/requests-oauth
+    Skipping link https://github.com/opensearch.xml (from https://github.com/maraujop/requests-oauth); unknown archive format: .xml
+    Skipping link https://github.com/fluidicon.png (from https://github.com/maraujop/requests-oauth); unknown archive format: .png
+    Skipping link https://github.com/favicon.ico (from https://github.com/maraujop/requests-oauth); unknown archive format: .ico
+    Skipping link https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github-43f9f2f0e1f6e9311e9ebaed1e0817c4198573df.css (from https://github.com/maraujop/requests-oauth); unknown archive format: .css
+    Skipping link https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github2-d104efb563e02d926c16b8c960e5bcde5ee2f182.css (from https://github.com/maraujop/requests-oauth); unknown archive format: .css
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev.atom (from https://github.com/maraujop/requests-oauth); unknown archive format: .atom
+    Skipping link https://github.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/plans (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/explore (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/features (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/blog (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/login?return_to=%2Fmaraujop%2Frequests-oauth (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/watchers (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/network (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/pulls (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/issues (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/graphs (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/languages/Python (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth#readme (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http:// (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/zipball/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth.git (from https://github.com/maraujop/requests-oauth); unknown archive format: .git
+    Skipping link git://github.com/maraujop/requests-oauth.git (from https://github.com/maraujop/requests-oauth); unknown archive format: .git
+    Skipping link https://github.com/maraujop/requests-oauth/dismiss-tree-finder-help (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tags (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/downloads (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link javascript:; (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/master (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.3 (from https://github.com/maraujop/requests-oauth); unknown archive format: .3
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.2 (from https://github.com/maraujop/requests-oauth); unknown archive format: .2
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.1 (from https://github.com/maraujop/requests-oauth); unknown archive format: .1
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.0 (from https://github.com/maraujop/requests-oauth); unknown archive format: .0
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.4 (from https://github.com/maraujop/requests-oauth); unknown archive format: .4
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.3 (from https://github.com/maraujop/requests-oauth); unknown archive format: .3
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.2 (from https://github.com/maraujop/requests-oauth); unknown archive format: .2
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.1 (from https://github.com/maraujop/requests-oauth); unknown archive format: .1
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.0 (from https://github.com/maraujop/requests-oauth); unknown archive format: .0
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/branches (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/06c282cc295ff903eafa97e1a4f6a42667cfdd80 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/gldnspud (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/immunda (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80/oauth_hook (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80/tests (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/9f666cda6ee20426826060aa48ce05e89c552484 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/.gitignore (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/c5027f32e3c063e5edb8a3f525c1744e45663629 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/AUTHORS (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/332be05528c36674c37dc255f95a931dcc995c77 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/LICENSE (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/MANIFEST.in (from https://github.com/maraujop/requests-oauth); unknown archive format: .in
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/README.md (from https://github.com/maraujop/requests-oauth); unknown archive format: .md
+    Skipping link https://github.com/maraujop/requests-oauth/commit/393185eca24a822939f66cc2a71944584e7fcbd5 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/setup.py (from https://github.com/maraujop/requests-oauth); unknown archive format: .py
+    Skipping link https://github.com/maraujop/requests-oauth/commit/92248faf9826b5e05d579f779bd7618451e62b71 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/kennethreitz (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://github.com/kennethreitz/requests (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/simplegeo/python-oauth2 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.github.com/maraujop/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://tools.ietf.org/html/rfc5849#section-3.5 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/about (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/contact (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/training (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://enterprise.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://status.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://get.gaug.es/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://speakerdeck.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://gist.github.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://mac.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://mobile.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://jobs.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://shop.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://octodex.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://help.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://developer.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://github.github.com/github-flavored-markdown/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://pages.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/site/terms (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/site/privacy (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/security (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspace.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspace.com%20 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspacecloud.com (from https://github.com/maraujop/requests-oauth); not a file
+  Analyzing links from page https://github.com/maraujop/requests-oauth
+    Skipping link https://github.com/opensearch.xml (from https://github.com/maraujop/requests-oauth); unknown archive format: .xml
+    Skipping link https://github.com/fluidicon.png (from https://github.com/maraujop/requests-oauth); unknown archive format: .png
+    Skipping link https://github.com/favicon.ico (from https://github.com/maraujop/requests-oauth); unknown archive format: .ico
+    Skipping link https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github-43f9f2f0e1f6e9311e9ebaed1e0817c4198573df.css (from https://github.com/maraujop/requests-oauth); unknown archive format: .css
+    Skipping link https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github2-d104efb563e02d926c16b8c960e5bcde5ee2f182.css (from https://github.com/maraujop/requests-oauth); unknown archive format: .css
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev.atom (from https://github.com/maraujop/requests-oauth); unknown archive format: .atom
+    Skipping link https://github.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/plans (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/explore (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/features (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/blog (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/login?return_to=%2Fmaraujop%2Frequests-oauth (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/watchers (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/network (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/pulls (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/issues (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/graphs (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/languages/Python (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth#readme (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http:// (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/zipball/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth.git (from https://github.com/maraujop/requests-oauth); unknown archive format: .git
+    Skipping link git://github.com/maraujop/requests-oauth.git (from https://github.com/maraujop/requests-oauth); unknown archive format: .git
+    Skipping link https://github.com/maraujop/requests-oauth/dismiss-tree-finder-help (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tags (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/downloads (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link javascript:; (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/master (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.3 (from https://github.com/maraujop/requests-oauth); unknown archive format: .3
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.2 (from https://github.com/maraujop/requests-oauth); unknown archive format: .2
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.1 (from https://github.com/maraujop/requests-oauth); unknown archive format: .1
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.0 (from https://github.com/maraujop/requests-oauth); unknown archive format: .0
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.4 (from https://github.com/maraujop/requests-oauth); unknown archive format: .4
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.3 (from https://github.com/maraujop/requests-oauth); unknown archive format: .3
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.2 (from https://github.com/maraujop/requests-oauth); unknown archive format: .2
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.1 (from https://github.com/maraujop/requests-oauth); unknown archive format: .1
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.0 (from https://github.com/maraujop/requests-oauth); unknown archive format: .0
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/branches (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/06c282cc295ff903eafa97e1a4f6a42667cfdd80 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/gldnspud (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/immunda (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80/oauth_hook (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80/tests (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/9f666cda6ee20426826060aa48ce05e89c552484 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/.gitignore (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/c5027f32e3c063e5edb8a3f525c1744e45663629 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/AUTHORS (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/332be05528c36674c37dc255f95a931dcc995c77 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/LICENSE (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/MANIFEST.in (from https://github.com/maraujop/requests-oauth); unknown archive format: .in
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/README.md (from https://github.com/maraujop/requests-oauth); unknown archive format: .md
+    Skipping link https://github.com/maraujop/requests-oauth/commit/393185eca24a822939f66cc2a71944584e7fcbd5 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/setup.py (from https://github.com/maraujop/requests-oauth); unknown archive format: .py
+    Skipping link https://github.com/maraujop/requests-oauth/commit/92248faf9826b5e05d579f779bd7618451e62b71 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/kennethreitz (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://github.com/kennethreitz/requests (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/simplegeo/python-oauth2 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.github.com/maraujop/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://tools.ietf.org/html/rfc5849#section-3.5 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/about (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/contact (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/training (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://enterprise.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://status.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://get.gaug.es/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://speakerdeck.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://gist.github.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://mac.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://mobile.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://jobs.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://shop.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://octodex.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://help.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://developer.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://github.github.com/github-flavored-markdown/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://pages.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/site/terms (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/site/privacy (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/security (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspace.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspace.com%20 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspacecloud.com (from https://github.com/maraujop/requests-oauth); not a file
+  Analyzing links from page https://github.com/maraujop/requests-oauth
+    Skipping link https://github.com/opensearch.xml (from https://github.com/maraujop/requests-oauth); unknown archive format: .xml
+    Skipping link https://github.com/fluidicon.png (from https://github.com/maraujop/requests-oauth); unknown archive format: .png
+    Skipping link https://github.com/favicon.ico (from https://github.com/maraujop/requests-oauth); unknown archive format: .ico
+    Skipping link https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github-43f9f2f0e1f6e9311e9ebaed1e0817c4198573df.css (from https://github.com/maraujop/requests-oauth); unknown archive format: .css
+    Skipping link https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github2-d104efb563e02d926c16b8c960e5bcde5ee2f182.css (from https://github.com/maraujop/requests-oauth); unknown archive format: .css
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev.atom (from https://github.com/maraujop/requests-oauth); unknown archive format: .atom
+    Skipping link https://github.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/plans (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/explore (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/features (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/blog (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/login?return_to=%2Fmaraujop%2Frequests-oauth (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/watchers (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/network (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/pulls (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/issues (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/graphs (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/languages/Python (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth#readme (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http:// (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/zipball/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth.git (from https://github.com/maraujop/requests-oauth); unknown archive format: .git
+    Skipping link git://github.com/maraujop/requests-oauth.git (from https://github.com/maraujop/requests-oauth); unknown archive format: .git
+    Skipping link https://github.com/maraujop/requests-oauth/dismiss-tree-finder-help (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tags (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/downloads (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link javascript:; (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/master (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.3 (from https://github.com/maraujop/requests-oauth); unknown archive format: .3
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.2 (from https://github.com/maraujop/requests-oauth); unknown archive format: .2
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.1 (from https://github.com/maraujop/requests-oauth); unknown archive format: .1
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.0 (from https://github.com/maraujop/requests-oauth); unknown archive format: .0
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.4 (from https://github.com/maraujop/requests-oauth); unknown archive format: .4
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.3 (from https://github.com/maraujop/requests-oauth); unknown archive format: .3
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.2 (from https://github.com/maraujop/requests-oauth); unknown archive format: .2
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.1 (from https://github.com/maraujop/requests-oauth); unknown archive format: .1
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.0 (from https://github.com/maraujop/requests-oauth); unknown archive format: .0
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/branches (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/06c282cc295ff903eafa97e1a4f6a42667cfdd80 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/gldnspud (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/immunda (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80/oauth_hook (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80/tests (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/9f666cda6ee20426826060aa48ce05e89c552484 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/.gitignore (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/c5027f32e3c063e5edb8a3f525c1744e45663629 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/AUTHORS (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/332be05528c36674c37dc255f95a931dcc995c77 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/LICENSE (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/MANIFEST.in (from https://github.com/maraujop/requests-oauth); unknown archive format: .in
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/README.md (from https://github.com/maraujop/requests-oauth); unknown archive format: .md
+    Skipping link https://github.com/maraujop/requests-oauth/commit/393185eca24a822939f66cc2a71944584e7fcbd5 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/setup.py (from https://github.com/maraujop/requests-oauth); unknown archive format: .py
+    Skipping link https://github.com/maraujop/requests-oauth/commit/92248faf9826b5e05d579f779bd7618451e62b71 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/kennethreitz (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://github.com/kennethreitz/requests (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/simplegeo/python-oauth2 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.github.com/maraujop/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://tools.ietf.org/html/rfc5849#section-3.5 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/about (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/contact (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/training (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://enterprise.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://status.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://get.gaug.es/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://speakerdeck.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://gist.github.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://mac.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://mobile.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://jobs.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://shop.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://octodex.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://help.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://developer.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://github.github.com/github-flavored-markdown/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://pages.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/site/terms (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/site/privacy (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/security (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspace.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspace.com%20 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspacecloud.com (from https://github.com/maraujop/requests-oauth); not a file
+  Analyzing links from page https://github.com/maraujop/requests-oauth
+    Skipping link https://github.com/opensearch.xml (from https://github.com/maraujop/requests-oauth); unknown archive format: .xml
+    Skipping link https://github.com/fluidicon.png (from https://github.com/maraujop/requests-oauth); unknown archive format: .png
+    Skipping link https://github.com/favicon.ico (from https://github.com/maraujop/requests-oauth); unknown archive format: .ico
+    Skipping link https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github-43f9f2f0e1f6e9311e9ebaed1e0817c4198573df.css (from https://github.com/maraujop/requests-oauth); unknown archive format: .css
+    Skipping link https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github2-d104efb563e02d926c16b8c960e5bcde5ee2f182.css (from https://github.com/maraujop/requests-oauth); unknown archive format: .css
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev.atom (from https://github.com/maraujop/requests-oauth); unknown archive format: .atom
+    Skipping link https://github.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/plans (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/explore (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/features (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/blog (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/login?return_to=%2Fmaraujop%2Frequests-oauth (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/watchers (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/network (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/pulls (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/issues (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/graphs (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/languages/Python (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth#readme (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http:// (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/zipball/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth.git (from https://github.com/maraujop/requests-oauth); unknown archive format: .git
+    Skipping link git://github.com/maraujop/requests-oauth.git (from https://github.com/maraujop/requests-oauth); unknown archive format: .git
+    Skipping link https://github.com/maraujop/requests-oauth/dismiss-tree-finder-help (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tags (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/downloads (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link javascript:; (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/master (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.3 (from https://github.com/maraujop/requests-oauth); unknown archive format: .3
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.2 (from https://github.com/maraujop/requests-oauth); unknown archive format: .2
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.1 (from https://github.com/maraujop/requests-oauth); unknown archive format: .1
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.2.0 (from https://github.com/maraujop/requests-oauth); unknown archive format: .0
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.4 (from https://github.com/maraujop/requests-oauth); unknown archive format: .4
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.3 (from https://github.com/maraujop/requests-oauth); unknown archive format: .3
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.2 (from https://github.com/maraujop/requests-oauth); unknown archive format: .2
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.1 (from https://github.com/maraujop/requests-oauth); unknown archive format: .1
+    Skipping link https://github.com/maraujop/requests-oauth/tree/0.1.0 (from https://github.com/maraujop/requests-oauth); unknown archive format: .0
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/branches (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/06c282cc295ff903eafa97e1a4f6a42667cfdd80 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/gldnspud (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/immunda (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commits/dev/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80/oauth_hook (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/tree/06c282cc295ff903eafa97e1a4f6a42667cfdd80/tests (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/9f666cda6ee20426826060aa48ce05e89c552484 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/.gitignore (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/c5027f32e3c063e5edb8a3f525c1744e45663629 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/AUTHORS (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/commit/332be05528c36674c37dc255f95a931dcc995c77 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/LICENSE (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/MANIFEST.in (from https://github.com/maraujop/requests-oauth); unknown archive format: .in
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/README.md (from https://github.com/maraujop/requests-oauth); unknown archive format: .md
+    Skipping link https://github.com/maraujop/requests-oauth/commit/393185eca24a822939f66cc2a71944584e7fcbd5 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/maraujop/requests-oauth/blob/06c282cc295ff903eafa97e1a4f6a42667cfdd80/setup.py (from https://github.com/maraujop/requests-oauth); unknown archive format: .py
+    Skipping link https://github.com/maraujop/requests-oauth/commit/92248faf9826b5e05d579f779bd7618451e62b71 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/kennethreitz (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://github.com/kennethreitz/requests (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/simplegeo/python-oauth2 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.github.com/maraujop/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://tools.ietf.org/html/rfc5849#section-3.5 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/about (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/contact (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/training (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://enterprise.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://status.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://get.gaug.es/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://speakerdeck.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://gist.github.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://mac.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://mobile.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://jobs.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://shop.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://octodex.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://help.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://developer.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://github.github.com/github-flavored-markdown/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://pages.github.com/ (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/site/terms (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/site/privacy (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link https://github.com/security (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspace.com (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspace.com%20 (from https://github.com/maraujop/requests-oauth); not a file
+    Skipping link http://www.rackspacecloud.com (from https://github.com/maraujop/requests-oauth); not a file
+  Using version 0.3.0 (newest of versions: 0.3.0, 0.2.3, 0.2.2, 0.2.1)
+  Downloading requests-oauth-0.3.0.tar.gz
+  Downloading from URL http://pypi.python.org/packages/source/r/requests-oauth/requests-oauth-0.3.0.tar.gz#md5=6ec90068b7a60eebfa5584489a2efa45 (from http://pypi.python.org/simple/requests-oauth/)
+Exception:
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 252, in main
+    self.run(options, args)
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 408, in run
+    requirement_set.install_files(finder, force_root_egg_info=self.bundle)
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 1757, in install_files
+    self.unpack_url(url, location)
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 1901, in unpack_url
+    self.unpack_file(temp_location, location, content_type, link)
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 1919, in unpack_file
+    self.untar_file(filename, location)
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 1965, in untar_file
+    os.makedirs(location)
+  File "/usr/lib/python2.6/os.py", line 157, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 13] Permission denied: '/home/filipe/workspace/qt-exemple/build/requests-oauth'
