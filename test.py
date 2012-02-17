@@ -6,6 +6,7 @@ from PyQt4 import QtCore, QtGui
 from mainwindow import Ui_MainWindow
 import urlRequest       
 import ui_form
+import edit_enviroment
 
 class Courses(QtGui.QWidget):
     def __init__(self):
@@ -18,7 +19,7 @@ class Courses(QtGui.QWidget):
         self.lbl = QtGui.QLabel("", self)
         combo = QtGui.QComboBox(self)
         for iterate in urlRequest.listRelated:
-                combo.addItem(iterate)
+                combo.addItem(iterate['name'])
 
         combo.move(50, 50)
         self.lbl.move(50, 100)
@@ -33,6 +34,67 @@ class Courses(QtGui.QWidget):
         TestWindow.joga(form, cursos)
         self.lbl.setText(text)
         self.lbl.adjustSize()
+
+class ComboEdit(QtGui.QWidget):
+    
+    def __init__(self):
+        super(ComboBox, self).__init__()
+        
+        self.initUI()
+        
+    def initUI(self):      
+
+        self.lbl = QtGui.QLabel("", self)
+        combo = QtGui.QComboBox(self)
+        for iterate in urlRequest.listRelated:
+                combo.addItem(iterate['name'])
+
+        combo.move(50, 50)
+        self.lbl.move(50, 150)
+
+        combo.activated[str].connect(self.onActivated)        
+         
+        self.setGeometry(300, 300, 300, 200)
+        self.setWindowTitle('QtGui.QComboBox')
+        self.show()
+        
+    def onActivated(self, text):
+
+        self.lbl.setText(text)
+        self.lbl.adjustSize()
+
+class ComboBox(QtGui.QWidget):
+    
+    def __init__(self):
+        super(ComboBox, self).__init__()
+        
+        self.initUI()
+        
+    def initUI(self):      
+
+        self.lbl = QtGui.QLabel("", self)
+        combo = QtGui.QComboBox(self)
+
+        combo.addItem("Coligado")
+        combo.addItem("Curso")
+        combo.addItem("Disciplina")
+        combo.addItem("Turma")
+
+        combo.move(50, 50)
+        self.lbl.move(50, 150)
+
+        combo.activated[str].connect(self.onActivated)        
+         
+        self.setGeometry(300, 300, 300, 200)
+        self.setWindowTitle('QtGui.QComboBox')
+        self.show()
+        
+    def onActivated(self, text):
+        if text == "Coligado":
+            text = 'titicaca'
+        self.lbl.setText(text)
+        self.lbl.adjustSize()
+
 
 class Discipline(QtGui.QWidget):
     def __init__(self):
@@ -79,7 +141,7 @@ class TestWindow(QtGui.QMainWindow, Ui_MainWindow):
                 self.listWidget.clear()
                 content = urlRequest.listRelated
                 for iterate in content:
-                        self.listWidget.addItem(iterate)
+                        self.listWidget.addItem(iterate['name'])
 
         def course(self):
                 self.listWidget.clear()
@@ -103,7 +165,8 @@ class TestWindow(QtGui.QMainWindow, Ui_MainWindow):
                 
         def update(self):
                 self.listWidget.clear()
-                self.listWidget.addItem("criar metodo update")
+                combo = ComboBox()
+                combo.main()
                 
         def joga(self, listaX):
                 self.listWidget.clear()

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui_form.ui'
+# Form implementation generated from reading ui file 'edit_enviroment.ui'
 #
-# Created: Fri Feb 10 15:28:50 2012
+# Created: Wed Feb 15 08:37:36 2012
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -10,39 +10,10 @@
 import sys
 from PyQt4 import QtCore, QtGui
 import urlRequest
-
-class Combo(QtGui.QWidget):
-    def __init__(self):
-        super(Combo, self).__init__()
-        
-        self.initUI()
-        
-    def initUI(self):
-
-        self.lbl = QtGui.QLabel("", self)
-        combo = QtGui.QComboBox(self)
-
-        combo.addItem("Coligado")
-        combo.addItem("Curso")
-        combo.addItem("Disciplina")
-        combo.addItem("Turma")
-
-
-        combo.move(50, 50)
-        self.lbl.move(50, 100)
-        combo.activated[str].connect(self.onActivated)
-        self.setGeometry(200, 200, 200, 100)
-        self.setWindowTitle('QtGui.QComboBox')
-        self.setWindowTitle('Novo')
-        self.show()
-        
-    def onActivated(self, text):
-#        if text == 'Coligado':
-#              form = ui_form.Ui_Form()
-        self.lbl.setText(text)
-        self.lbl.adjustSize()
+import combo_enviroment
 
 class Ui_Form(object):
+
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(533, 364)
@@ -55,14 +26,11 @@ class Ui_Form(object):
         self.Enviroment = QtGui.QLabel(self.formLayoutWidget)
         self.Enviroment.setObjectName("Enviroment")
         self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.Enviroment)
-
         self.name_enviroment = QtGui.QLineEdit(self.formLayoutWidget)
         self.name_enviroment.setObjectName("name_enviroment")
-
         self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.name_enviroment)
         self.label = QtGui.QLabel(self.formLayoutWidget)
         self.label.setObjectName("label")
-        
         self.formLayout.setWidget(2, QtGui.QFormLayout.LabelRole, self.label)
         self.path_enviroment = QtGui.QLineEdit(self.formLayoutWidget)
         self.path_enviroment.setObjectName("path_enviroment")
@@ -82,7 +50,6 @@ class Ui_Form(object):
         self.submit = QtGui.QPushButton(Form)
         self.submit.setGeometry(QtCore.QRect(370, 320, 161, 41))
         self.submit.setObjectName("submit")
-        
         self.submit.connect(self.submit, QtCore.SIGNAL("clicked()"), self.form_enviroment)
         
         self.abort = QtGui.QPushButton(Form)
@@ -93,22 +60,31 @@ class Ui_Form(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
         
-    def form_enviroment(self):
+        combo = combo_enviroment.main()
+        
 
-        dict_enviroment = {'name':'','path':'','initials':'','description':''}
+        
+    def for_edit(self):
+
+        dict_enviroment_edit = urlRequest.listRelated
+        for iterate in dict_enviroment_edit:
+            if iterate['name'] == value_combo:
+                self.name_enviroment.setText(iterate['name'])
+                self.path_enviroment.setText(iterate['path'])
+                self.initials_enviroment.setText(iterate['initials'])
+                iterate['description'] = str(self.description_enviroment.toPlainText())
+
+            
+    def form_enviroment(self):
+        dict_enviroment = {}
         dict_enviroment['name'] = str(self.name_enviroment.text())
         dict_enviroment['path'] = str(self.path_enviroment.text())
         dict_enviroment['initials'] = str(self.initials_enviroment.text())
         dict_enviroment['description'] = str(self.description_enviroment.toPlainText())
-
-        urlRequest.new_enviroment(dict_enviroment)
-        
-    def update_enviroment(self):
-        
-        self.name_envitoment.setText("")
+        print dict_enviroment
 
     def retranslateUi(self, Form):
-        Form.setWindowTitle(QtGui.QApplication.translate("Form", "Criar Novo Coligado", None, QtGui.QApplication.UnicodeUTF8))
+        Form.setWindowTitle(QtGui.QApplication.translate("Form", "Form", None, QtGui.QApplication.UnicodeUTF8))
         self.Enviroment.setText(QtGui.QApplication.translate("Form", "Nome do Coligado", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("Form", "URL", None, QtGui.QApplication.UnicodeUTF8))
         self.label_2.setText(QtGui.QApplication.translate("Form", "Iniciais", None, QtGui.QApplication.UnicodeUTF8))
