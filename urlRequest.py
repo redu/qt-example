@@ -21,20 +21,31 @@ for iterate in list_json('environments'):
 def get_courses(env_name):
         for iterate in list_json('environments'):
                   if iterate['name'] == env_name:
+                          global course_id
                           course_id = iterate['id']
         return list_json('environments/' + str(course_id) + '/courses')
         
-def get_spaces(env_name, course):
-        for iterate in course:
-                  if iterate['name'] == env_name:
-                          Id = iterate['id']
-                          return list_json('courses/' + str(Id) + '/spaces')
+def get_spaces(env_path):
+        return list_json('courses/' + str(env_path) + '/spaces')
+#        for iterate in course:
+#                  if iterate['name'] == env_name:
+#                          Id = iterate['id']
+#                          return list_json('courses/' + str(Id) + '/spaces')
         
 def new_enviroment(dict_enviroment):
         params = simplejson.dumps({'environment': dict_enviroment })
         url = "http://127.0.0.1:3000/api/environments"
         headers = {'content-type':'application/json'}
         result = requests.post(url, data=params, headers=headers)
+
+def new_form(dict_form):
+        for iterate in listRelated:
+            if iterate['id'] == course_id:
+                print iterate['name']
+#        params = simplejson.dumps({'environment': dict_enviroment })
+#        url = "http://127.0.0.1:3000/api/environments"
+#        headers = {'content-type':'application/json'}
+#        result = requests.post(url, data=params, headers=headers)
 
 def update_enviroment(name_enviroment):
         for iterate in listRelated:

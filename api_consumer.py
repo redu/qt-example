@@ -19,11 +19,10 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
 #        self.name.setText('Filipe')
 #        self.checkBox_form.animateClick()
 #        self.connect(self.turma, QtCore.SIGNAL('clicked()'),self.gang)
-        self.connect(self.submit, QtCore.SIGNAL('clicked()'),self.new)
+        self.connect(self.submit_ok, QtCore.SIGNAL('clicked()'),self.new)
         self.connect(self.edit, QtCore.SIGNAL('clicked()'),self.update)
-        
 
-    
+#   Funcao lista Coligado     
     def related(self):
         self.listWidget.clear()
         self.comboBox.clear()
@@ -49,8 +48,21 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.textEdit.setText('Optional')
         content = urlRequest.listRelated
         for iterate in content:
+            self.comboBox.addItem(iterate['name'])
+                               
+        
+        self.comboBox.activated[str].connect(self.onActivated_coligado)
+        for iterate in content:
             self.listWidget.addItem(iterate['name'])
-            
+    
+    def onActivated_coligado(self, text):
+        self.listWidget.clear()
+        self.listWidget.addItem(text)
+        global current
+        current = text
+        
+#   Funcao lista cursos depende do Coligado selecionado
+    
     def course_related(self):
         self.listWidget.clear()
         self.comboBox.clear()
@@ -73,15 +85,29 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
 
         self.textEdit.setText('Optional')
         self.workload.setText('Optional')
-        content = urlRequest.listRelated
-        if content == []:
-            self.listWidget.addItem('Não há cursos para esse coligado')
-        else:
-            for iterate in content:
-                self.comboBox.addItem(iterate['name'])
-                               
-        self.comboBox.activated[str].connect(self.onActivated_courses)
+        
+        if current:
+            content = urlRequest.get_courses(current)
+            if content == []:
+                self.listWidget.addItem('Nao ha curso cadastrado')
+            else:
+                for iterate in content:
+                        self.comboBox.addItem(iterate['name'])
+                        self.listWidget.addItem(iterate['name'])
+                self.comboBox.activated[str].connect(self.onActivated_courses)            
+#        else:
+#            self.listWidget.addItem('Click em Coligados e escolha um Coligado no ComboBox')
 
+    def onActivated_courses(self, text):
+        self.listWidget.clear()
+        self.listWidget.addItem(text)
+        content = urlRequest.get_courses(current)
+
+        for iterate in content:
+            if text == iterate['name']:
+                global course_current
+                course_current = iterate['path']
+               
     def discipline_related(self):
         self.listWidget.clear()
         self.comboBox.clear()
@@ -103,26 +129,23 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.checkBox_description.animateClick()
             
         self.workload.setText('')
-        for iterate in courses:
-            self.comboBox.addItem(iterate['name'])
 
-        self.comboBox.activated[str].connect(self.onActivated_discipline)
+        if current:
+            discipline = urlRequest.get_spaces(course_current)
+            if discipline != []:
+                for iterate in discipline:
+                   self.comboBox.addItem(iterate['name'])
+                   self.listWidget.addItem(iterate['name'])
+            else:
+                self.listWidget.addItem('Nao ha disciplinas cadastradas')
+        self.comboBox.activated[str].connect(self.onActivated_discipline)            
         
     def onActivated_discipline(self, text):
         self.listWidget.clear()
-        discipline = urlRequest.get_spaces(text, courses)
-        for iterate in discipline:
-            self.listWidget.addItem(iterate['name'])
+        self.listWidget.addItem(text)
+
         
-    def onActivated_courses(self, text):
-        self.listWidget.clear()
-        global courses
-        courses = urlRequest.get_courses(text)
-        if courses == []:
-            self.listWidget.addItem('Não há cursos cadastradas para esse Coligado')
-        for iterate in courses:
-            self.listWidget.addItem(iterate['name'])
-            
+
     def new(self):
         form_name = str(self.lineEdit_2.text())
         def clear_form():
@@ -144,7 +167,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.listWidget.clear()
             self.listWidget.addItem('Novo coligado adicionado')
             
-        elif form_name == 'Curso': # Falta selecionar o Coligado relacionado 
+        elif form_name == 'Curso': # O formulario atribui metodo a form_name/ current
             dict_course = {'name':'','path':'','workload':'','description':''}            
             dict_course['name'] = str(self.name.text())            
             dict_course['path'] = str(self.path.text())
@@ -152,8 +175,10 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
             dict_course['description'] = str(self.textEdit.toPlainText())
             
             # Criar medoto e urlRequest para add novo curso
+            urlRequest.new_form(dict_course)
             clear_form()
             self.listWidget.clear()
+            print current
             self.listWidget.addItem('Novo curso cadastrado')
        
         elif form_name == 'Disciplina':
@@ -169,9 +194,31 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.listWidget.addItem('Nova disciplina cadastrada')
 
     def update(self):
-        pass
+        form_name = str(self.lineEdit_2.text())
+        if form_name == 'Coligado':
+            content = urlRequest.listRelated
+            for iterate in content:
+                if iterate['name'] == current:
+                    self.name.setText(iterate['name'])
+                    self.path.setText(iterate['path'])
+                    self.initials.setText(iterate['initials'])
+                    self.description.setText(iterate['description'])
         
+        elif form_name == 'Curso':
+            content = urlRequest.get_courses(current)
+            for iterate in content:
+                if iterate['name'] == current:
+                    self.name.setText(iterate['name'])
+                    self.path.setText(iterate['path'])
+                    self.workload.setText(iterate['workload'])
+                    self.description.setText(iterate['description'])
 
+        elif form_name == 'Disciplina':
+            content = urlRequest.get_courses(current)
+            for iterate in content:
+                if iterate['name'] == current:
+                    self.name.setText(iterate['name'])
+                    self.path.setText(iterate['path'])
 
       
       
