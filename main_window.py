@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'main_window.ui'
 #
-# Created: Fri Feb 17 10:39:57 2012
+# Created: Sat Feb 18 18:57:21 2012
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -48,11 +48,9 @@ class Ui_MainWindow(object):
         self.label = QtGui.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(30, 170, 71, 20))
         self.label.setObjectName("label")
-        
         self.comboBox = QtGui.QComboBox(self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(550, 10, 231, 31))
         self.comboBox.setObjectName("comboBox")
-        
         self.textEdit = QtGui.QTextEdit(self.centralwidget)
         self.textEdit.setGeometry(QtCore.QRect(110, 160, 401, 101))
         self.textEdit.setObjectName("textEdit")
@@ -65,10 +63,10 @@ class Ui_MainWindow(object):
         self.listWidget.setObjectName("listWidget")
         self.verticalLayout.addWidget(self.listWidget)
         self.submit = QtGui.QPushButton(self.centralwidget)
-        self.submit.setGeometry(QtCore.QRect(410, 270, 101, 27))
+        self.submit.setGeometry(QtCore.QRect(210, 270, 111, 27))
         self.submit.setObjectName("submit")
         self.abort = QtGui.QPushButton(self.centralwidget)
-        self.abort.setGeometry(QtCore.QRect(210, 270, 93, 27))
+        self.abort.setGeometry(QtCore.QRect(320, 270, 101, 27))
         self.abort.setObjectName("abort")
         self.enviroment = QtGui.QPushButton(self.centralwidget)
         self.enviroment.setGeometry(QtCore.QRect(10, 310, 201, 27))
@@ -83,8 +81,35 @@ class Ui_MainWindow(object):
         self.gang.setGeometry(QtCore.QRect(600, 310, 191, 27))
         self.gang.setObjectName("gang")
         self.edit = QtGui.QPushButton(self.centralwidget)
-        self.edit.setGeometry(QtCore.QRect(310, 270, 93, 27))
+        self.edit.setGeometry(QtCore.QRect(110, 270, 101, 27))
         self.edit.setObjectName("edit")
+        self.checkBox_initials = QtGui.QCheckBox(self.centralwidget)
+        self.checkBox_initials.setGeometry(QtCore.QRect(510, 100, 94, 31))
+        self.checkBox_initials.setText("")
+        self.checkBox_initials.setObjectName("checkBox_initials")
+        self.checkBox_workload = QtGui.QCheckBox(self.centralwidget)
+        self.checkBox_workload.setGeometry(QtCore.QRect(510, 130, 94, 31))
+        self.checkBox_workload.setText("")
+        self.checkBox_workload.setObjectName("checkBox_workload")
+        self.checkBox_description = QtGui.QCheckBox(self.centralwidget)
+        self.checkBox_description.setGeometry(QtCore.QRect(510, 190, 94, 31))
+        self.checkBox_description.setText("")
+        self.checkBox_description.setObjectName("checkBox_description")
+        self.checkBox_path = QtGui.QCheckBox(self.centralwidget)
+        self.checkBox_path.setGeometry(QtCore.QRect(510, 70, 94, 31))
+        self.checkBox_path.setText("")
+        self.checkBox_path.setObjectName("checkBox_path")
+        self.checkBox_name = QtGui.QCheckBox(self.centralwidget)
+        self.checkBox_name.setGeometry(QtCore.QRect(510, 40, 94, 31))
+        self.checkBox_name.setText("")
+        self.checkBox_name.setObjectName("checkBox_name")
+        self.checkBox_form = QtGui.QCheckBox(self.centralwidget)
+        self.checkBox_form.setGeometry(QtCore.QRect(510, 10, 94, 31))
+        self.checkBox_form.setText("")
+        self.checkBox_form.setObjectName("checkBox_form")
+        self.submit_ok = QtGui.QPushButton(self.centralwidget)
+        self.submit_ok.setGeometry(QtCore.QRect(420, 270, 93, 27))
+        self.submit_ok.setObjectName("submit_ok")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -108,4 +133,5 @@ class Ui_MainWindow(object):
         self.discipline.setText(QtGui.QApplication.translate("MainWindow", "Disciplina", None, QtGui.QApplication.UnicodeUTF8))
         self.gang.setText(QtGui.QApplication.translate("MainWindow", "Turmas", None, QtGui.QApplication.UnicodeUTF8))
         self.edit.setText(QtGui.QApplication.translate("MainWindow", "Editar", None, QtGui.QApplication.UnicodeUTF8))
+        self.submit_ok.setText(QtGui.QApplication.translate("MainWindow", "Ok", None, QtGui.QApplication.UnicodeUTF8))
 

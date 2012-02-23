@@ -24,13 +24,13 @@ def get_courses(env_name):
                           course_id = iterate['id']
         return list_json('environments/' + str(course_id) + '/courses')
         
-def get_spaces(env_name):
-        for iterate in result:
+def get_spaces(env_name, course):
+        for iterate in course:
                   if iterate['name'] == env_name:
                           Id = iterate['id']
-        return list_json('courses/' + str(Id) + '/spaces')
+                          return list_json('courses/' + str(Id) + '/spaces')
         
-def new_enviroment(dict_enviroment): 
+def new_enviroment(dict_enviroment):
         params = simplejson.dumps({'environment': dict_enviroment })
         url = "http://127.0.0.1:3000/api/environments"
         headers = {'content-type':'application/json'}
