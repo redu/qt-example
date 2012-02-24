@@ -4,7 +4,8 @@
 import sys
 from PyQt4 import QtCore, QtGui
 from main_window import Ui_MainWindow
-import urlRequest       
+import urlRequest
+import simplejson
 
 
 
@@ -208,13 +209,18 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 dict_environment['initials'] = str(self.initials.text())
                 if str(self.textEdit.toPlainText()) != 'Optional':
                     dict_environment['description'] = str(self.textEdit.toPlainText())
-           
-                urlRequest.update_form(dict_environment, current, form_name)
-                self.listWidget.addItem('O coligado foi atualizado com sucesso')
 
                 clear_form()
-                self.listWidget.clear()
-                self.listWidget.addItem('Coligado atualizado')
+                self.listWidget.clear()           
+                result = urlRequest.update_form(dict_environment, current, form_name)
+
+                if result.ok:
+                    self.listWidget.addItem('O coligado foi atualizado com sucesso')
+                else:
+                    self.listWidget.addItem('Erro')
+                    self.name.setText(simplejson.loads(result.content)['name'][0])
+                    self.path.setText(simplejson.loads(result.content)['path'][0])
+                    
             
             elif form_name == 'Curso':
                 dict_course = {'name':'','path':'','workload':'','description':''}            
@@ -224,23 +230,30 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                     dict_course['workload'] = str(self.workload.text())
                 if str(self.textEdit.toPlainText()) != 'Optional':
                     dict_course['description'] = str(self.textEdit.toPlainText())
-                
-                urlRequest.update_form(dict_course,current, form_name)
-                self.listWidget.addItem('O curso foi atualizado')
 
                 clear_form()
-                self.listWidget.clear()
-       
+                self.listWidget.clear()                
+                result = urlRequest.update_form(dict_course,current, form_name)
+                if result.ok:
+                    self.listWidget.addItem('O curso foi atualizado com sucesso')
+                else:
+                    self.listWidget.addItem('Erro')
+                    self.name.setText(simplejson.loads(result.content)['name'][0])
+                    self.path.setText(simplejson.loads(result.content)['path'][0])
+
             elif form_name == 'Disciplina':
                 dict_discipline = {'name':'','description':''}
                 dict_discipline['name'] = str(self.name.text())            
                 dict_discipline['description'] = str(self.textEdit.toPlainText())
-                
-                result = urlRequest.update_form(dict_discipline,current, course_current)
-                self.listWidget.addItem('A disciplina foi atualizada')
-
                 clear_form()
-                self.listWidget.clear()
+                self.listWidget.clear()                
+                result = urlRequest.update_form(dict_discipline,current, course_current)
+                if result.ok:
+                    self.listWidget.addItem('O curso foi atualizado com sucesso')
+                else:
+                    self.listWidget.addItem('Erro')
+                    self.name.setText(simplejson.loads(result.content)['name'][0])
+                    self.path.setText(simplejson.loads(result.content)['path'][0])
 #
 # =========================================================================
 #       Butao Ok para o metodo new
@@ -261,13 +274,13 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 dict_enviroment['path'] = str(self.path.text())
                 dict_enviroment['initials'] = str(self.initials.text())
                 dict_enviroment['description'] = str(self.textEdit.toPlainText())
-           
-                result = urlRequest.new_enviroment(dict_enviroment)
-                self.listWidget.addItem('Novo coligado adicionado')
-
                 clear_form()
-                self.listWidget.clear()
-                
+                self.listWidget.clear()           
+                result = urlRequest.new_enviroment(dict_enviroment)
+                if result.ok:
+                    self.listWidget.addItem('Novo coligado adicionado')
+                else:
+                    self.listWidget.addItem('Erro')
             
             elif form_name == 'Curso':
 #            Cadastra curso            
@@ -278,11 +291,13 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 if str(self.textEdit.toPlainText()) != 'Optional':
                     dict_course['description'] = str(self.textEdit.toPlainText())
                 
-                result = urlRequest.new_form(dict_course,current,form_name)
-                self.listWidget.addItem('Novo curso cadastrado')
-                    
                 clear_form()
                 self.listWidget.clear()
+                result = urlRequest.new_form(dict_course,current,form_name)
+                if result.ok:
+                    self.listWidget.addItem('Novo curso cadastrado')
+                else:
+                    self.listWidget.addItem('Erro')
        
             elif form_name == 'Disciplina': 
 #            Cadastra disciplina
@@ -296,9 +311,6 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 clear_form()
                 self.listWidget.clear()
 
-
-      
-      
 app = QtGui.QApplication(sys.argv)
 form = APIWindow()
 form.show()
