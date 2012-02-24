@@ -62,6 +62,7 @@ def new_form(dict_form, current, name_form):
                 headers = {'content-type':'application/json'}
                 result = requests.post(url, data=params, headers=headers)
                 return result
+                
 def update_form(dict_any, current, name_form):
 
     if name_form == 'Coligado':
@@ -80,6 +81,16 @@ def update_form(dict_any, current, name_form):
                 url = "http://127.0.0.1:3000/api/courses/" + str(iterate['id'])
                 headers = {'content-type':'application/json'}
                 result = requests.put(url, data=params, headers=headers)
+                print dir(result)
+                print '---------------'
+                print result.status_code
+                print '---------------'
+                print result.text
+                print '---------------'
+                print result.ok
+                print '---------------'
+                print result.content
+                print '---------------'
                 return result
     
     elif name_form != 'Coligado' and name_form != 'Curso':
