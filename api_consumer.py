@@ -24,19 +24,19 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
         
 #         Ainda nao foi criado o metodo de matricula
 #        self.connect(self.turma, QtCore.SIGNAL('clicked()'),self.gang)
-
+        self.connect(self.abort, QtCore.SIGNAL('clicked()'),self.clean_form)
         self.connect(self.submit_ok, QtCore.SIGNAL('clicked()'),self.new)
+        self.connect(self.submit, QtCore.SIGNAL('clicked()'),self.nothing)
         self.connect(self.edit, QtCore.SIGNAL('clicked()'),self.update)
 
 #   Funcao lista Coligado     
     def related(self):
+        self.clean_form()
         global event
         event = False
         self.listWidget.clear()
         self.comboBox.clear()
-        if self.checkBox_form.checkState() == 2:
-            pass
-        else:
+        if self.checkBox_form.checkState() == 0:
             self.checkBox_form.animateClick()        
             
         self.lineEdit_2.setText('Coligado')
@@ -71,11 +71,9 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
 #   Funcao lista cursos depende do Coligado selecionado
     
     def course_related(self):
-        self.listWidget.clear()
-        self.comboBox.clear()
-        if self.checkBox_form.checkState() == 2:
-            pass
-        else:
+        self.clean_form()
+        
+        if self.checkBox_form.checkState() == 0:
             self.checkBox_form.animateClick()
             
         self.lineEdit_2.setText('Curso')
@@ -116,11 +114,8 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 course_current = iterate['path']
                
     def discipline_related(self):
-        self.listWidget.clear()
-        self.comboBox.clear()
-        if self.checkBox_form.checkState() == 2:
-            pass
-        else:
+        self.clean_form()
+        if self.checkBox_form.checkState() == 0:
             self.checkBox_form.animateClick()
             
         self.lineEdit_2.setText('Disciplina')
@@ -150,7 +145,18 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
     def onActivated_discipline(self, text):
         self.listWidget.clear()
         self.listWidget.addItem(text)
-        
+           
+    def nothing(self):
+        global event
+        event = False
+        self.clean_form()
+                
+    def clean_form(self):
+        self.name.setText('')
+        self.workload.setText('')
+        self.textEdit.setText('')
+        self.path.setText('')
+        self.initials.setText('')
 # ============================================================
 #       metodo update
 #
@@ -192,16 +198,9 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
     
 #       Butao Ok para o metodo update
 #  =============================================================================
-    
-        if event:
-            form_name = str(self.lineEdit_2.text())
-            def clear_form():
-                self.name.setText('')
-                self.workload.setText('')
-                self.textEdit.setText('')
-                self.path.setText('')
-                self.initials.setText('')
             
+        if event:
+            form_name = str(self.lineEdit_2.text())            
             if form_name == 'Coligado':
                 dict_environment = {'name':'','path':'','initials':'','description':''}            
                 dict_environment['name'] = str(self.name.text())            
@@ -210,7 +209,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 if str(self.textEdit.toPlainText()) != 'Optional':
                     dict_environment['description'] = str(self.textEdit.toPlainText())
 
-                clear_form()
+                self.clean_form()
                 self.listWidget.clear()           
                 result = urlRequest.update_form(dict_environment, current, form_name)
 
@@ -231,7 +230,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 if str(self.textEdit.toPlainText()) != 'Optional':
                     dict_course['description'] = str(self.textEdit.toPlainText())
 
-                clear_form()
+                self.clean_form()
                 self.listWidget.clear()                
                 result = urlRequest.update_form(dict_course,current, form_name)
                 if result.ok:
@@ -245,7 +244,8 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 dict_discipline = {'name':'','description':''}
                 dict_discipline['name'] = str(self.name.text())            
                 dict_discipline['description'] = str(self.textEdit.toPlainText())
-                clear_form()
+                
+                self.clean_form()
                 self.listWidget.clear()                
                 result = urlRequest.update_form(dict_discipline,current, course_current)
                 if result.ok:
@@ -260,13 +260,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
 
         else:
             form_name = str(self.lineEdit_2.text())
-            def clear_form():
-                self.name.setText('')
-                self.workload.setText('')
-                self.textEdit.setText('')
-                self.path.setText('')
-                self.initials.setText('')
-            
+            self.clean_form()
             if form_name == 'Coligado':
 #            Cadastra coligado
                 dict_enviroment = {'name':'','path':'','initials':'','description':''}            
@@ -274,13 +268,15 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 dict_enviroment['path'] = str(self.path.text())
                 dict_enviroment['initials'] = str(self.initials.text())
                 dict_enviroment['description'] = str(self.textEdit.toPlainText())
-                clear_form()
+                self.clean_form()
                 self.listWidget.clear()           
                 result = urlRequest.new_enviroment(dict_enviroment)
                 if result.ok:
                     self.listWidget.addItem('Novo coligado adicionado')
                 else:
                     self.listWidget.addItem('Erro')
+                    self.name.setText(simplejson.loads(result.content)['name'][0])
+                    self.path.setText(simplejson.loads(result.content)['path'][0])
             
             elif form_name == 'Curso':
 #            Cadastra curso            
@@ -291,13 +287,15 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 if str(self.textEdit.toPlainText()) != 'Optional':
                     dict_course['description'] = str(self.textEdit.toPlainText())
                 
-                clear_form()
+                self.clean_form()
                 self.listWidget.clear()
                 result = urlRequest.new_form(dict_course,current,form_name)
                 if result.ok:
                     self.listWidget.addItem('Novo curso cadastrado')
                 else:
                     self.listWidget.addItem('Erro')
+                    self.name.setText(simplejson.loads(result.content)['name'][0])
+                    self.path.setText(simplejson.loads(result.content)['path'][0])
        
             elif form_name == 'Disciplina': 
 #            Cadastra disciplina
@@ -305,11 +303,15 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 dict_discipline['name'] = str(self.name.text())            
                 dict_discipline['description'] = str(self.textEdit.toPlainText())
                 
+                self.clean_form()
                 result = urlRequest.new_form(dict_discipline,current,form_name)
-                self.listWidget.addItem('Nova disciplina cadastrada')
-                    
-                clear_form()
-                self.listWidget.clear()
+                if result.ok:
+                    self.listWidget.addItem('Nova disciplina cadastrada')
+                else:
+                    self.listWidget.addItem('Erro')
+                    self.name.setText(simplejson.loads(result.content)['name'][0])
+                    self.path.setText(simplejson.loads(result.content)['path'][0])
+                
 
 app = QtGui.QApplication(sys.argv)
 form = APIWindow()
