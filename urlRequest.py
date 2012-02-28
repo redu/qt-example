@@ -70,24 +70,39 @@ def update_form(dict_any, current, name_form):
             if iterate['name'] == current:
                 params = simplejson.dumps({'environment': dict_any })
                 url = "http://127.0.0.1:3000/api/environments/" + str(iterate['id'])
-                headers = {'content-type':'application/json'}
-                result = requests.put(url, data=params, headers=headers)
-                return result
-                
+                                
     elif name_form == 'Curso':
         for iterate in get_courses(current):
             if iterate['name'] == current:
                 params = simplejson.dumps({'course': dict_any })
                 url = "http://127.0.0.1:3000/api/courses/" + str(iterate['id'])
-                headers = {'content-type':'application/json'}
-                result = requests.put(url, data=params, headers=headers)
-                return result
-    
+                   
     elif name_form != 'Coligado' and name_form != 'Curso':
         for iterate in get_spaces(name_form):
             if iterate['name'] == current:
                 params = simplejson.dumps({'space': dict_any })
                 url = "http://127.0.0.1:3000/api/spaces/" + str(iterate['id'])
-                headers = {'content-type':'application/json'}
-                result = requests.put(url, data=params, headers=headers)
-                return result
+               
+    headers = {'content-type':'application/json'}
+    result = requests.put(url, data=params, headers=headers)
+    return result
+               
+def kill_current(form_name,current):
+
+    if form_name == 'Coligado':
+        for iterate in list_related():
+            if iterate['name'] == current:
+                url = "http://127.0.0.1:3000/api/environments/" + str(iterate['id'])
+                                
+    elif form_name == 'Curso':
+        for iterate in get_courses(current):
+            if iterate['name'] == current:
+                url = "http://127.0.0.1:3000/api/courses/" + str(iterate['id'])
+                
+    else:
+        for iterate in get_spaces(form_name):
+            if iterate['name'] == current:
+                url = "http://127.0.0.1:3000/api/spaces/" + str(iterate['id'])
+    
+    result = requests.delete(url)
+    return result

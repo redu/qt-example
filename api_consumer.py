@@ -28,6 +28,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.connect(self.submit_ok, QtCore.SIGNAL('clicked()'),self.new)
         self.connect(self.submit, QtCore.SIGNAL('clicked()'),self.nothing)
         self.connect(self.edit, QtCore.SIGNAL('clicked()'),self.update)
+        self.connect(self.remove, QtCore.SIGNAL('clicked()'),self.kill)
 
 #   Funcao lista Coligado     
     def related(self):
@@ -152,6 +153,8 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.clean_form()
                 
     def clean_form(self):
+        self.comboBox.clear()
+        self.listWidget.clear()
         self.name.setText('')
         self.workload.setText('')
         self.textEdit.setText('')
@@ -200,7 +203,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
 #  =============================================================================
             
         if event:
-            form_name = str(self.lineEdit_2.text())            
+            form_name = str(self.lineEdit_2.text())
             if form_name == 'Coligado':
                 dict_environment = {'name':'','path':'','initials':'','description':''}            
                 dict_environment['name'] = str(self.name.text())            
@@ -304,15 +307,29 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 dict_discipline['description'] = str(self.textEdit.toPlainText())
                 
                 self.clean_form()
+                self.listWidget.clear()
                 result = urlRequest.new_form(dict_discipline,current,form_name)
                 if result.ok:
                     self.listWidget.addItem('Nova disciplina cadastrada')
                 else:
                     self.listWidget.addItem('Erro')
                     self.name.setText(simplejson.loads(result.content)['name'][0])
-                    self.path.setText(simplejson.loads(result.content)['path'][0])
                 
-
+    def kill(self):
+        name_form = str(self.lineEdit_2.text())
+        self.clean_form()
+        self.listWidget.clear()
+        if name_form != 'Coligado' and name_form != 'Curso':
+            result = urlRequest.kill_current(course_current, current)
+        else:
+            result = urlRequest.kill_current(name_form,current)
+            
+        if result.ok:
+            self.listWidget.addItem('Remocao efetuada com sucesso')
+        else:
+            self.listWidget.addItem('Erro: Nao encontrado')
+            
+            
 app = QtGui.QApplication(sys.argv)
 form = APIWindow()
 form.show()

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'main_window.ui'
 #
-# Created: Sat Feb 18 18:57:21 2012
+# Created: Tue Feb 28 10:18:37 2012
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -63,10 +63,10 @@ class Ui_MainWindow(object):
         self.listWidget.setObjectName("listWidget")
         self.verticalLayout.addWidget(self.listWidget)
         self.submit = QtGui.QPushButton(self.centralwidget)
-        self.submit.setGeometry(QtCore.QRect(210, 270, 111, 27))
+        self.submit.setGeometry(QtCore.QRect(190, 270, 81, 31))
         self.submit.setObjectName("submit")
         self.abort = QtGui.QPushButton(self.centralwidget)
-        self.abort.setGeometry(QtCore.QRect(320, 270, 101, 27))
+        self.abort.setGeometry(QtCore.QRect(270, 270, 81, 31))
         self.abort.setObjectName("abort")
         self.enviroment = QtGui.QPushButton(self.centralwidget)
         self.enviroment.setGeometry(QtCore.QRect(10, 310, 201, 27))
@@ -81,7 +81,7 @@ class Ui_MainWindow(object):
         self.gang.setGeometry(QtCore.QRect(600, 310, 191, 27))
         self.gang.setObjectName("gang")
         self.edit = QtGui.QPushButton(self.centralwidget)
-        self.edit.setGeometry(QtCore.QRect(110, 270, 101, 27))
+        self.edit.setGeometry(QtCore.QRect(110, 270, 81, 31))
         self.edit.setObjectName("edit")
         self.checkBox_initials = QtGui.QCheckBox(self.centralwidget)
         self.checkBox_initials.setGeometry(QtCore.QRect(510, 100, 94, 31))
@@ -108,8 +108,11 @@ class Ui_MainWindow(object):
         self.checkBox_form.setText("")
         self.checkBox_form.setObjectName("checkBox_form")
         self.submit_ok = QtGui.QPushButton(self.centralwidget)
-        self.submit_ok.setGeometry(QtCore.QRect(420, 270, 93, 27))
+        self.submit_ok.setGeometry(QtCore.QRect(350, 270, 81, 31))
         self.submit_ok.setObjectName("submit_ok")
+        self.remove = QtGui.QPushButton(self.centralwidget)
+        self.remove.setGeometry(QtCore.QRect(430, 270, 91, 31))
+        self.remove.setObjectName("remove")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -134,4 +137,5 @@ class Ui_MainWindow(object):
         self.gang.setText(QtGui.QApplication.translate("MainWindow", "Turmas", None, QtGui.QApplication.UnicodeUTF8))
         self.edit.setText(QtGui.QApplication.translate("MainWindow", "Editar", None, QtGui.QApplication.UnicodeUTF8))
         self.submit_ok.setText(QtGui.QApplication.translate("MainWindow", "Ok", None, QtGui.QApplication.UnicodeUTF8))
+        self.remove.setText(QtGui.QApplication.translate("MainWindow", "Remover", None, QtGui.QApplication.UnicodeUTF8))
 
