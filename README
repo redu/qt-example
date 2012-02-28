@@ -2,3 +2,4 @@ Uma micro-app consumer para Testes Qt Creador
 
   qt-example: é uma aplicação consumer para a plataforma de aplição do Redu.
   Para instalar as libs necessarias para rodar essa aplicação faça: pip install -r requirements.txt
+  O arquivo main é api_consumer.py
