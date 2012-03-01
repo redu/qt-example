@@ -21,9 +21,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.connect(self.enviroment, QtCore.SIGNAL('clicked()'),self.related)
         self.connect(self.course, QtCore.SIGNAL('clicked()'),self.course_related)
         self.connect(self.discipline, QtCore.SIGNAL('clicked()'),self.discipline_related)
-        
-#         Ainda nao foi criado o metodo de matricula
-#        self.connect(self.turma, QtCore.SIGNAL('clicked()'),self.gang)
+        self.connect(self.gang, QtCore.SIGNAL('clicked()'),self.gang_related)
         self.connect(self.abort, QtCore.SIGNAL('clicked()'),self.clean_form)
         self.connect(self.submit_ok, QtCore.SIGNAL('clicked()'),self.new)
         self.connect(self.submit, QtCore.SIGNAL('clicked()'),self.nothing)
@@ -53,7 +51,6 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
         if self.checkBox_description.checkState() == 0:
             self.checkBox_description.animateClick()
         
-        self.workload.setText('')
         self.textEdit.setText('Optional')
         content = urlRequest.list_related()
         for iterate in content:
@@ -130,8 +127,6 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.checkBox_workload.animateClick()
         if self.checkBox_description.checkState() == 0:
             self.checkBox_description.animateClick()
-            
-        self.workload.setText('')
 
         if current:
             discipline = urlRequest.get_spaces(course_current)
@@ -147,6 +142,30 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.listWidget.clear()
         self.listWidget.addItem(text)
            
+    def gang_related(self):
+        self.clean_form()
+        if self.checkBox_form.checkState() == 0:
+            self.checkBox_form.animateClick()
+            
+        self.lineEdit_2.setText('Turma')
+        if self.checkBox_name.checkState() == 2:
+            self.checkBox_name.animateClick()
+        if self.checkBox_path.checkState() == 2:
+            self.checkBox_path.animateClick()
+        if self.checkBox_initials.checkState() == 2:
+            self.checkBox_initials.animateClick()
+        if self.checkBox_workload.checkState() == 2:
+            self.checkBox_workload.animateClick()
+        if self.checkBox_description.checkState() == 2:
+            self.checkBox_description.animateClick()
+            
+        if course_current:
+            result = urlRequest.get_user_gang(course_current)
+            if result != []:
+                   for iterate in result:
+                        self.comboBox.addItem(iterate)
+                        self.listWidget.addItem(iterate)
+        
     def nothing(self):
         global event
         event = False

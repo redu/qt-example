@@ -36,7 +36,17 @@ def get_spaces(env_path):
 #                  if iterate['name'] == env_name:
 #                          Id = iterate['id']
 #                          return list_json('courses/' + str(Id) + '/spaces')
-        
+
+def get_user_gang(course_current):
+    users = []
+    list_users = simplejson.loads(urllib.urlopen('http://127.0.0.1:3000/api/courses/'+ str(course_current) +'/enrollments.json').read())
+    for iterate in list_users:
+        for it in iterate['links']:
+            if it['rel'] == 'user':
+                last_json = simplejson.loads(urllib.urlopen(str(it['href'])+'.json').read())
+                users.append(last_json['first_name'])
+    return users            
+
 def new_enviroment(dict_enviroment):
         params = simplejson.dumps({'environment': dict_enviroment })
         url = "http://127.0.0.1:3000/api/environments"
