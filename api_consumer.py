@@ -345,6 +345,9 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                     self.listWidget.addItem('Erro')
                     self.name.setText(simplejson.loads(result.content)['name'][0])
                 
+            else:
+#            Matricular no curso
+                pass
     def kill(self):
         name_form = str(self.lineEdit_2.text())
         self.clean_form()

@@ -35,6 +35,7 @@ def get_spaces(env_path):
 
 def get_user_gang(course_current):
     users = []
+    global list_users
     list_users = simplejson.loads(urllib.urlopen('http://127.0.0.1:3000/api/courses/'+ str(course_current) +'/enrollments.json').read())
     for iterate in list_users:
         for it in iterate['links']:
@@ -111,7 +112,9 @@ def kill_current(form_name,current):
             if iterate['rel'] == 'enrollments':
                 ID = simplejson.loads(urllib.urlopen(str(iterate['href'])+'.json').read())
                 for it in ID:
-                    url = "http://127.0.0.1:3000/api/enrollments/" + str(it['id'])
+                    for him in list_users:
+                        if it['id'] == him['id']:
+                             url = "http://127.0.0.1:3000/api/enrollments/" + str(it['id'])
                     
     else:
         for iterate in get_spaces(form_name):
