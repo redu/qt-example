@@ -136,7 +136,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                    self.listWidget.addItem(iterate['name'])
             else:
                 self.listWidget.addItem('Nao ha disciplinas cadastradas')
-        self.comboBox.activated[str].connect(self.onActivated_discipline)            
+        self.comboBox.activated[str].connect(self.onActivated_discipline)
         
     def onActivated_discipline(self, text):
         self.listWidget.clear()
@@ -163,8 +163,19 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
             result = urlRequest.get_user_gang(course_current)
             if result != []:
                    for iterate in result:
-                        self.comboBox.addItem(iterate)
-                        self.listWidget.addItem(iterate)
+                        self.comboBox.addItem(iterate['first_name'])
+                        self.listWidget.addItem(iterate['first_name'])
+
+            self.comboBox.activated[str].connect(self.onActivated_gang)
+
+                
+    def onActivated_gang(self, text):
+        global user_name_current
+        result = urlRequest.get_user_gang(course_current)
+        if result != []:
+            for iterate in result:
+                if iterate['first_name'] == text:
+                    user_name_current = iterate
         
     def nothing(self):
         global event
@@ -338,8 +349,13 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
         name_form = str(self.lineEdit_2.text())
         self.clean_form()
         self.listWidget.clear()
-        if name_form != 'Coligado' and name_form != 'Curso':
+        
+        if name_form != 'Coligado' and name_form != 'Curso' and name_form != 'Turma':
             result = urlRequest.kill_current(course_current, current)
+            
+        elif name_form == 'Turma':
+            result = urlRequest.kill_current(name_form, user_name_current)
+        
         else:
             result = urlRequest.kill_current(name_form,current)
             

@@ -32,10 +32,6 @@ def get_courses(env_name):
         
 def get_spaces(env_path):
         return list_json('courses/' + str(env_path) + '/spaces')
-#        for iterate in course:
-#                  if iterate['name'] == env_name:
-#                          Id = iterate['id']
-#                          return list_json('courses/' + str(Id) + '/spaces')
 
 def get_user_gang(course_current):
     users = []
@@ -44,8 +40,9 @@ def get_user_gang(course_current):
         for it in iterate['links']:
             if it['rel'] == 'user':
                 last_json = simplejson.loads(urllib.urlopen(str(it['href'])+'.json').read())
-                users.append(last_json['first_name'])
-    return users            
+                users.append(last_json)
+                
+    return users
 
 def new_enviroment(dict_enviroment):
         params = simplejson.dumps({'environment': dict_enviroment })
@@ -108,7 +105,14 @@ def kill_current(form_name,current):
         for iterate in get_courses(current):
             if iterate['name'] == current:
                 url = "http://127.0.0.1:3000/api/courses/" + str(iterate['id'])
-                
+         
+    elif form_name == 'Turma':
+        for iterate in current['links']:
+            if iterate['rel'] == 'enrollments':
+                ID = simplejson.loads(urllib.urlopen(str(iterate['href'])+'.json').read())
+                for it in ID:
+                    url = "http://127.0.0.1:3000/api/enrollments/" + str(it['id'])
+                    
     else:
         for iterate in get_spaces(form_name):
             if iterate['name'] == current:
