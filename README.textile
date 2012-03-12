@@ -6,3 +6,12 @@ Para instalar as libs necessarias para rodar essa aplicação faça:
 table(table table-bordered table-striped).
 |_.pip install -r requirements.txt|
 O arquivo main é api_consumer.py
+
+h4. Mapeamento das ações na tela de interface Api Consumer
+
+table(table table-bordered table-striped).
+|_.Botões|
+|Coligados|Lista coligados|
+|Cursos|Lista cursos de um determinado coligado|
+|Disciplinas|lista as disciplinas de um determinado curso|
+|Turmas|lista alunos de uma turma|
