@@ -2,5 +2,7 @@ h2. Uma micro-app consumer para Testes em PyQt
 
 Qt-example: é uma aplicação consumer para a plataforma de aplição do Redu.
 Para instalar as libs necessarias para rodar essa aplicação faça:
+
+table(table table-bordered table-striped).
 |_.pip install -r requirements.txt|
 O arquivo main é api_consumer.py
