@@ -1,7 +1,4 @@
-title: Redu para desenvolvedores
-tagline: "Documentação da API de examplo"
-
-h2. Uma micro-app consumer para Testes Qt Creador
+h2. Uma micro-app consumer para Testes em PyQt
 
   qt-example: é uma aplicação consumer para a plataforma de aplição do Redu.
   Para instalar as libs necessarias para rodar essa aplicação faça: pip install -r requirements.txt
