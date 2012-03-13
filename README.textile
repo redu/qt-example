@@ -10,8 +10,11 @@ O arquivo main é api_consumer.py
 h4. Mapeamento das ações na tela de interface Api Consumer
 
 table(table table-bordered table-striped).
-|_.Botões|
+|_.Botões|_.Funcionalidade|
 |Coligados|Lista coligados|
 |Cursos|Lista cursos de um determinado coligado|
 |Disciplinas|lista as disciplinas de um determinado curso|
 |Turmas|lista alunos de uma turma|
+|_.Formulário|_.Funcionalidade|
+
+continuar
