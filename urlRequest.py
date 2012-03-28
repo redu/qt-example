@@ -5,17 +5,13 @@ import urllib
 from urllib import urlencode
 import simplejson
 import requests
-from oauth_hook import OAuthHook
-import oauth2
-
-client = requests.session(params={"oauth_token":"Gu1AEYTPTeTsHdvSTdv9M36wTOv0NTFWvVoPuP7r"})
 
 def list_json(resource):
         url = 'http://0.0.0.0:3000/api/'
         url = url + resource + '.json'
-        f = urllib.urlopen(url)
+        r = requests.get(url).content
         global result
-        result = simplejson.loads(f.read())
+        result = simplejson.loads(r)
         return result
 
 
@@ -53,7 +49,7 @@ def new_enviroment(dict_enviroment):
         params = simplejson.dumps({'environment': dict_enviroment })
         url = "http://127.0.0.1:3000/api/environments"
         headers = {'content-type':'application/json'}
-        result = client.post(url, data={'environment': dict_enviroment })
+        result = client.post(url, data=params)
         return result
 
 def new_form(dict_form, current, name_form):
