@@ -15,6 +15,13 @@ table(table table-bordered table-striped).
 |Cursos|Lista cursos de um determinado coligado|
 |Disciplinas|lista as disciplinas de um determinado curso|
 |Turmas|lista alunos de uma turma|
-|_.Formulário|_.Funcionalidade|
 
+h4. Autenticação
 
+O Redu utiliza o protocolo OAuth, para mais informações acesse http://developers.redu.com.br
+
+Após cadastrar sua aplicação em http://www.redu.com.br/oauth_clients você receberá algumas informações, pegue a CONSUMER_KEY e a CONSUMER_SECRET e substitua seus valores no script de autorização "autorize_oauth.py" e rode o script.
+
+Ao final do script anterior ele mostra seu 'oauth_token', copie o valor e substitua no arquivo de configuração 'redu_auth.py'
+
+Agora é só rodar a aplicação com "pyhon api_consumer.py"

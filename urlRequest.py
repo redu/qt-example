@@ -5,11 +5,14 @@ import urllib
 from urllib import urlencode
 import simplejson
 import requests
+from redu_auth import oauth_token
+
+client=requests.session(params={"oauth_token":oauth_token},headers={'content-type':'application/json'})
 
 def list_json(resource):
         url = 'http://0.0.0.0:3000/api/'
         url = url + resource + '.json'
-        r = requests.get(url).content
+        r = client.get(url).content
         global result
         result = simplejson.loads(r)
         return result
@@ -48,7 +51,6 @@ def get_user_gang(course_current):
 def new_enviroment(dict_enviroment):
         params = simplejson.dumps({'environment': dict_enviroment })
         url = "http://127.0.0.1:3000/api/environments"
-        headers = {'content-type':'application/json'}
         result = client.post(url, data=params)
         return result
 
@@ -70,8 +72,7 @@ def new_form(dict_form, current, name_form):
         params = simplejson.dumps({'enrollment': dict_form })
         url = "http://127.0.0.1:3000/api/courses/" + str(id_course['id']) + "/enrollments"
     
-    headers = {'content-type':'application/json'}
-    result = requests.post(url, data=params, headers=headers)
+    result = client.post(url, data=params)
     return result
         
 def update_form(dict_any, current, name_form):
@@ -94,8 +95,7 @@ def update_form(dict_any, current, name_form):
                 params = simplejson.dumps({'space': dict_any })
                 url = "http://127.0.0.1:3000/api/spaces/" + str(iterate['id'])
                
-    headers = {'content-type':'application/json'}
-    result = requests.put(url, data=params, headers=headers)
+    result = client.put(url, data=params)
     return result
                
 def kill_current(form_name,current):
@@ -124,5 +124,5 @@ def kill_current(form_name,current):
             if iterate['name'] == current:
                 url = "http://127.0.0.1:3000/api/spaces/" + str(iterate['id'])
     
-    result = requests.delete(url)
+    result = client.delete(url)
     return result
