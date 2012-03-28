@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'main_window.ui'
 #
-# Created: Tue Feb 28 10:18:37 2012
+# Created: Fri Mar  9 08:10:30 2012
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -133,7 +133,7 @@ class Ui_MainWindow(object):
         self.abort.setText(QtGui.QApplication.translate("MainWindow", "Cancelar", None, QtGui.QApplication.UnicodeUTF8))
         self.enviroment.setText(QtGui.QApplication.translate("MainWindow", "Coligados", None, QtGui.QApplication.UnicodeUTF8))
         self.course.setText(QtGui.QApplication.translate("MainWindow", "Cursos", None, QtGui.QApplication.UnicodeUTF8))
-        self.discipline.setText(QtGui.QApplication.translate("MainWindow", "Disciplina", None, QtGui.QApplication.UnicodeUTF8))
+        self.discipline.setText(QtGui.QApplication.translate("MainWindow", "Disciplinas", None, QtGui.QApplication.UnicodeUTF8))
         self.gang.setText(QtGui.QApplication.translate("MainWindow", "Turmas", None, QtGui.QApplication.UnicodeUTF8))
         self.edit.setText(QtGui.QApplication.translate("MainWindow", "Editar", None, QtGui.QApplication.UnicodeUTF8))
         self.submit_ok.setText(QtGui.QApplication.translate("MainWindow", "Ok", None, QtGui.QApplication.UnicodeUTF8))

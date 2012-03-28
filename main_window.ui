@@ -239,7 +239,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Disciplina</string>
+     <string>Disciplinas</string>
     </property>
    </widget>
    <widget class="QPushButton" name="gang">

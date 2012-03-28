@@ -5,6 +5,10 @@ import urllib
 from urllib import urlencode
 import simplejson
 import requests
+from oauth_hook import OAuthHook
+import oauth2
+
+client = requests.session(params={"oauth_token":"Gu1AEYTPTeTsHdvSTdv9M36wTOv0NTFWvVoPuP7r"})
 
 def list_json(resource):
         url = 'http://0.0.0.0:3000/api/'
@@ -49,7 +53,7 @@ def new_enviroment(dict_enviroment):
         params = simplejson.dumps({'environment': dict_enviroment })
         url = "http://127.0.0.1:3000/api/environments"
         headers = {'content-type':'application/json'}
-        result = requests.post(url, data=params, headers=headers)
+        result = client.post(url, data={'environment': dict_enviroment })
         return result
 
 def new_form(dict_form, current, name_form):
@@ -58,19 +62,22 @@ def new_form(dict_form, current, name_form):
             if iterate['name'] == current:
                 params = simplejson.dumps({'course': dict_form })
                 url = "http://127.0.0.1:3000/api/environments/" + str(iterate['id']) + "/courses"
-                headers = {'content-type':'application/json'}
-                result = requests.post(url, data=params, headers=headers)
-                return result
-
+                
     elif name_form == 'Disciplina':
         for iterate in get_courses(current):
             if iterate['name'] == current:
                 params = simplejson.dumps({'space': dict_form })
-                url = "http://127.0.0.1:3000/api/courses/" + str(iterate['id']) + "/spaces"
-                headers = {'content-type':'application/json'}
-                result = requests.post(url, data=params, headers=headers)
-                return result
+                url = "http://127.0.0.1:3000/api/courses/" + str(iterate['id']) + "/spaces"                
                 
+    else:
+        id_course = simplejson.loads(urllib.urlopen('http://127.0.0.1:3000/api/courses/'+ str(current) +'.json').read())
+        params = simplejson.dumps({'enrollment': dict_form })
+        url = "http://127.0.0.1:3000/api/courses/" + str(id_course['id']) + "/enrollments"
+    
+    headers = {'content-type':'application/json'}
+    result = requests.post(url, data=params, headers=headers)
+    return result
+        
 def update_form(dict_any, current, name_form):
 
     if name_form == 'Coligado':

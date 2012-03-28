@@ -27,6 +27,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.connect(self.submit, QtCore.SIGNAL('clicked()'),self.nothing)
         self.connect(self.edit, QtCore.SIGNAL('clicked()'),self.update)
         self.connect(self.remove, QtCore.SIGNAL('clicked()'),self.kill)
+        self.name_label.setText('Nome')
 
 #   Funcao lista Coligado     
     def related(self):
@@ -180,7 +181,14 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
     def nothing(self):
         global event
         event = False
+        form_name = str(self.lineEdit_2.text())
         self.clean_form()
+        if form_name == 'Turma':
+            self.name_label.setText('Email')
+            self.listWidget.addItem('Para matricular um novo aluno preencha o campo email no formulario acima')
+            if self.checkBox_name.checkState() == 0:
+                self.checkBox_name.animateClick()
+        
                 
     def clean_form(self):
         self.comboBox.clear()
@@ -293,7 +301,6 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
 
         else:
             form_name = str(self.lineEdit_2.text())
-            self.clean_form()
             if form_name == 'Coligado':
 #            Cadastra coligado
                 dict_enviroment = {'name':'','path':'','initials':'','description':''}            
@@ -333,7 +340,7 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
             elif form_name == 'Disciplina': 
 #            Cadastra disciplina
                 dict_discipline = {'name':'','description':''}
-                dict_discipline['name'] = str(self.name.text())            
+                dict_discipline['name'] = str(self.name.text())
                 dict_discipline['description'] = str(self.textEdit.toPlainText())
                 
                 self.clean_form()
@@ -347,7 +354,19 @@ class APIWindow(QtGui.QMainWindow, Ui_MainWindow):
                 
             else:
 #            Matricular no curso
-                pass
+                dict_enrollment_user = {'email':''}
+                dict_enrollment_user['email'] = str(self.name.text())
+
+                self.clean_form()
+                self.listWidget.clear()
+                result = urlRequest.new_form(dict_discipline,current,form_name)
+                if result.ok:
+                    self.listWidget.addItem('Novo aluno matriculado')
+                else:
+                    self.listWidget.addItem('Erro')
+                    self.name.setText(simplejson.loads(result.content)['name'][0])
+
+            self.name_label.setText('Nome')
     def kill(self):
         name_form = str(self.lineEdit_2.text())
         self.clean_form()
