@@ -1,7 +1,6 @@
 h2. Uma micro-app consumer para Testes em PyQt
 
-Qt-example: é uma aplicação consumer para a plataforma de aplição do Redu.
-Para instalar as libs necessarias para rodar essa aplicação faça:
+Qt-example: é uma aplicação consumer para a plataforma de aplicação do Redu. Para instalar as libs necessarias para rodar essa aplicação faça:
 
 table(table table-bordered table-striped).
 |_.pip install -r requirements.txt|
@@ -18,10 +17,10 @@ table(table table-bordered table-striped).
 
 h4. Autenticação
 
-O Redu utiliza o protocolo OAuth, para mais informações acesse http://developers.redu.com.br
+O Redu utiliza o protocolo OAuth, para mais informações acesse "http://developers.redu.com.br":http://developers.redu.com.br
 
-Após cadastrar sua aplicação em http://www.redu.com.br/oauth_clients você receberá algumas informações, pegue a CONSUMER_KEY e a CONSUMER_SECRET e substitua seus valores no script de autorização "autorize_oauth.py" e rode o script.
+Após cadastrar sua aplicação em "http://www.redu.com.br/oauth_clients":http://www.redu.com.br/oauth_clients você receberá algumas informações, pegue a "CONSUMER_KEY":https://github.com/redu/qt-example/blob/master/authorize_oauth.py#L8 e a "CONSUMER_SECRET":https://github.com/redu/qt-example/blob/master/authorize_oauth.py#L9 e substitua seus valores no script de autorização "autorize_oauth.py":https://github.com/redu/qt-example/blob/master/authorize_oauth.py e rode o script.
 
-Ao final do script anterior ele mostra seu 'oauth_token', copie o valor e substitua no arquivo de configuração 'redu_auth.py'
+Ao final do script anterior ele mostra seu 'oauth_token':https://github.com/redu/qt-example/blob/master/authorize_oauth.py#L58, copie o valor e substitua no arquivo de configuração 'redu_auth.py':https://github.com/redu/qt-example/blob/master/redu_auth.py
 
 Agora é só rodar a aplicação com "pyhon api_consumer.py"

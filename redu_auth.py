@@ -1,1 +1,1 @@
-oauth_token="bUa2BF4set8iNSJ0SF8PWaNFkRKcwuXM0tmtzmec"
+oauth_token="YOUR_oauth_token"
